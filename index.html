@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<!--  Last Published: Fri Aug 03 2018 12:30:37 GMT+0000 (UTC)  -->
+<html data-wf-page="5b56de3fd788d5f049275ecb" data-wf-site="5b56de3fd788d522d9275ec6">
+<head>
+  <meta charset="utf-8">
+  <title>RefineMedium</title>
+
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel="stylesheet" href="js/flipclock.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="js/flipclock.js"></script>  
+
+
+
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/components.css" rel="stylesheet" type="text/css">
+  <link href="css/refinemedium.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Roboto:300,regular,500"]  }});</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/rsz_whatsapp_image_2018-07-21_at_170648.jpg" rel="shortcut icon" type="image/x-icon">
+  <link href="images/rsz_1whatsapp_image_2018-07-21_at_170648.jpg" rel="apple-touch-icon">
+  <style>
+  /* Get the bourbon mixin from http://bourbon.io */
+/* Reset */
+.flip-clock-wrapper * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flip-clock-wrapper a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ccc; }
+.flip-clock-wrapper a:hover {
+  color: #fff; }
+.flip-clock-wrapper ul {
+  list-style: none; }
+.flip-clock-wrapper.clearfix:before,
+.flip-clock-wrapper.clearfix:after {
+  content: " ";
+  display: table; }
+.flip-clock-wrapper.clearfix:after {
+  clear: both; }
+.flip-clock-wrapper.clearfix {
+  *zoom: 1; }
+/* Main */
+.flip-clock-wrapper {
+  font: normal 11px "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-user-select: none; }
+.flip-clock-meridium {
+  background: none !important;
+  box-shadow: 0 0 0 !important;
+  font-size: 36px !important; }
+.flip-clock-meridium a { color: #313333; }
+.flip-clock-wrapper {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin: 1em;
+}
+.flip-clock-wrapper:before,
+.flip-clock-wrapper:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.flip-clock-wrapper:after {
+    clear: both;
+}
+/* Skeleton */
+.flip-clock-wrapper ul {
+  position: relative;
+  float: left;
+  margin: 5px;
+  width: 60px;
+  height: 90px;
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 87px;
+  border-radius: 6px;
+  background: #000;
+}
+.flip-clock-wrapper ul li {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 87px;
+  text-decoration: none !important;
+}
+.flip-clock-wrapper ul li:first-child {
+  z-index: 2; }
+.flip-clock-wrapper ul li a {
+  display: block;
+  height: 100%;
+  -webkit-perspective: 200px;
+  -moz-perspective: 200px;
+  perspective: 200px;
+  margin: 0 !important;
+  overflow: visible !important;
+  cursor: default !important; }
+.flip-clock-wrapper ul li a div {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  font-size: 80px;
+  overflow: hidden; 
+  outline: 1px solid transparent; }
+.flip-clock-wrapper ul li a div .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2; }
+.flip-clock-wrapper ul li a div.up {
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  top: 0; }
+.flip-clock-wrapper ul li a div.up:after {
+  content: "";
+  position: absolute;
+  top: 44px;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.4); }
+.flip-clock-wrapper ul li a div.down {
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  -o-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  bottom: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.flip-clock-wrapper ul li a div div.inn {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 200%;
+  color: #ccc;
+  text-shadow: 0 1px 2px #000;
+  text-align: center;
+  background-color: #333;
+  border-radius: 6px;
+  font-size: 70px; }
+.flip-clock-wrapper ul li a div.up div.inn {
+  top: 0; }
+.flip-clock-wrapper ul li a div.down div.inn {
+  bottom: 0; }
+/* PLAY */
+.flip-clock-wrapper ul.play li.flip-clock-before {
+  z-index: 3; }
+.flip-clock-wrapper .flip {   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); }
+.flip-clock-wrapper ul.play li.flip-clock-active {
+  -webkit-animation: asd 0.5s 0.5s linear both;
+  -moz-animation: asd 0.5s 0.5s linear both;
+  animation: asd 0.5s 0.5s linear both;
+  z-index: 5; }
+.flip-clock-divider {
+  float: left;
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 100px; }
+.flip-clock-divider:first-child {
+  width: 0; }
+.flip-clock-dot {
+  display: block;
+  background: #323434;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  left: 5px; }
+.flip-clock-divider .flip-clock-label {
+  position: absolute;
+  top: -1.5em;
+  right: -86px;
+  color: black;
+  text-shadow: none; }
+.flip-clock-divider.minutes .flip-clock-label {
+  right: -88px; }
+.flip-clock-divider.seconds .flip-clock-label {
+  right: -91px; }
+.flip-clock-dot.top {
+  top: 30px; }
+.flip-clock-dot.bottom {
+  bottom: 30px; }
+@-webkit-keyframes asd {
+  0% {
+    z-index: 2; }
+  20% {
+    z-index: 4; }
+  100% {
+    z-index: 4; } }
+@-moz-keyframes asd {
+  0% {
+    z-index: 2; }
+  20% {
+    z-index: 4; }
+  100% {
+    z-index: 4; } }
+@-o-keyframes asd {
+  0% {
+    z-index: 2; }
+  20% {
+    z-index: 4; }
+  100% {
+    z-index: 4; } }
+@keyframes asd {
+  0% {
+    z-index: 2; }
+  20% {
+    z-index: 4; }
+  100% {
+    z-index: 4; } }
+.flip-clock-wrapper ul.play li.flip-clock-active .down {
+  z-index: 2;
+  -webkit-animation: turn 0.5s 0.5s linear both;
+  -moz-animation: turn 0.5s 0.5s linear both;
+  animation: turn 0.5s 0.5s linear both; }
+@-webkit-keyframes turn {
+  0% {
+    -webkit-transform: rotateX(90deg); }
+  100% {
+    -webkit-transform: rotateX(0deg); } }
+@-moz-keyframes turn {
+  0% {
+    -moz-transform: rotateX(90deg); }
+  100% {
+    -moz-transform: rotateX(0deg); } }
+@-o-keyframes turn {
+  0% {
+    -o-transform: rotateX(90deg); }
+  100% {
+    -o-transform: rotateX(0deg); } }
+@keyframes turn {
+  0% {
+    transform: rotateX(90deg); }
+  100% {
+    transform: rotateX(0deg); } }
+.flip-clock-wrapper ul.play li.flip-clock-before .up {
+  z-index: 2;
+  -webkit-animation: turn2 0.5s linear both;
+  -moz-animation: turn2 0.5s linear both;
+  animation: turn2 0.5s linear both; }
+@-webkit-keyframes turn2 {
+  0% {
+    -webkit-transform: rotateX(0deg); }
+  100% {
+    -webkit-transform: rotateX(-90deg); } }
+@-moz-keyframes turn2 {
+  0% {
+    -moz-transform: rotateX(0deg); }
+  100% {
+    -moz-transform: rotateX(-90deg); } }
+@-o-keyframes turn2 {
+  0% {
+    -o-transform: rotateX(0deg); }
+  100% {
+    -o-transform: rotateX(-90deg); } }
+@keyframes turn2 {
+  0% {
+    transform: rotateX(0deg); }
+  100% {
+    transform: rotateX(-90deg); } }
+.flip-clock-wrapper ul li.flip-clock-active {
+  z-index: 3; }
+/* SHADOW */
+.flip-clock-wrapper ul.play li.flip-clock-before .up .shadow {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black));
+  background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100%;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%;
+  -webkit-animation: show 0.5s linear both;
+  -moz-animation: show 0.5s linear both;
+  animation: show 0.5s linear both; }
+.flip-clock-wrapper ul.play li.flip-clock-active .up .shadow {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black));
+  background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100%;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%;
+  -webkit-animation: hide 0.5s 0.3s linear both;
+  -moz-animation: hide 0.5s 0.3s linear both;
+  animation: hide 0.5s 0.3s linear both; }
+/*DOWN*/
+.flip-clock-wrapper ul.play li.flip-clock-before .down .shadow {
+  background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1)));
+  background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100%;
+  background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%;
+  -webkit-animation: show 0.5s linear both;
+  -moz-animation: show 0.5s linear both;
+  animation: show 0.5s linear both; }
+.flip-clock-wrapper ul.play li.flip-clock-active .down .shadow {
+  background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1)));
+  background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100%;
+  background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%;
+  -webkit-animation: hide 0.5s 0.3s linear both;
+  -moz-animation: hide 0.5s 0.3s linear both;
+  animation: hide 0.5s 0.2s linear both; }
+@-webkit-keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-o-keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-moz-keyframes hide {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-o-keyframes hide {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes hide {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+</style>
+</head>
+<body class="body">
+  <div data-collapse="medium" data-animation="over-left" data-duration="400" class="navigation-bar w-nav">
+    <div class="container w-container">
+      <a href="index.html" class="brand-link w-nav-brand">
+        <h1 class="brand-text">Refinemedium</h1>
+      </a>
+      <nav role="navigation" class="navigation-menu w-nav-menu"><a id="section" href="index.html" class="navigation-link w-nav-link w--current">Home</a><a href="#feature-refine" class="navigation-link w-nav-link">Feature</a><a href="documents/1.-RM.pdf" target="_blank" class="navigation-link w-nav-link">Documentation</a><a href="#team-members" class="nav-link w-nav-link">Team</a><a href="contact.html" class="navigation-link w-nav-link">Contact Us</a></nav>
+      <div class="hamburger-button w-nav-button">
+        <div class="icon w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-section centered">
+    <h2 class="heading-26 w-hidden-main">REFINEMEDIUM</h2>
+    <div data-ix="new-interaction" class="w-container">
+      <h1 data-w-id="d6b79be9-0e17-dad6-bef7-0ce0b00091e5" style="opacity:0" class="section-heading centered title w-hidden-medium w-hidden-small w-hidden-tiny">REFINEMEDIUM</h1>
+      <div data-ix="fade-in-bottom-page-loads" class="hero-subheading">A contribution towards redefining world with blockchain technology</div>
+      <div data-ix="fade-in-bottom-page-loads"><a href="documents/1.-RM.pdf" target="_blank" class="hollow-button all-caps">WHItepaper</a><a href="#" class="hollow-button all-caps">guide</a></div>
+    </div>
+    <div class="w-container">
+      <!-- <div class="html-embed-2 w-embed w-script"> -->
+        <!-- <div data-type="countdown" data-id="683895" class="tickcounter" style="width: 100%; position: relative; padding-bottom: 25%"><a href="//www.tickcounter.com/countdown/683895/my-countdown" title="My countdown">My countdown</a><a href="//www.tickcounter.com/" title="Countdown">Countdown</a></div> -->
+      <!--   <script>(function(d, s, id) { var js, pjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//www.tickcounter.com/static/js/loader.js"; pjs.parentNode.insertBefore(js, pjs); }(document, "script", "tickcounter-sdk"));</script> -->
+<div class="clock" style="width: 100%; position: relative; padding-bottom: 25% !important;"></div>
+
+<script type="text/javascript">
+  var clock = $('.clock').FlipClock(3600 * 24 * 3, {
+    clockFace: 'DailyCounter',
+    countdown: true
+  });
+</script>
+
+
+  
+
+      <!-- </div> -->
+    </div>
+  </div>
+  <div data-w-id="c74a3b69-c956-e8f7-efd4-7317a316ae75" style="opacity:0" class="section">
+    <div class="container-2 w-container">
+      <div class="section-title-group">
+        <div class="w-row">
+          <div class="w-col w-col-3"><img src="images/cdecentralizedsocialnetwork.png" srcset="images/cdecentralizedsocialnetwork-p-500.png 500w, images/cdecentralizedsocialnetwork.png 512w" sizes="(max-width: 556px) 92vw, (max-width: 767px) 512px, (max-width: 991px) 167px, 220px" data-w-id="bdf95535-8da4-f9c2-a880-ab0b735c7034" style="opacity:0" class="image-2"></div>
+          <div data-w-id="8c6dd6fd-6fc0-9ccc-adf2-4a220aa246a1" style="opacity:0" class="w-col w-col-9">
+            <h1 class="heading-5">DECENTRALISED SOCIAL NETWORK</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section accent">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-3"><img src="images/R-logo1x.png" srcset="images/R-logo1x-p-500.png 500w, images/R-logo1x.png 512w" sizes="(max-width: 479px) 71vw, (max-width: 701px) 73vw, (max-width: 767px) 512px, (max-width: 991px) 19vw, 20vw" data-w-id="9b986dd7-6000-d2a5-7def-f42b313c5769" style="opacity:0"></div>
+        <div data-w-id="ac80fb0d-f577-d7a8-a78b-15453b5093db" style="opacity:0" class="column-2 w-col w-col-9">
+          <h2 class="section-heading centered newpoi w-hidden-medium w-hidden-small w-hidden-tiny">WHAT IS REFINEMEDIUM?</h2>
+          <h2 class="heading-25 h25 w-hidden-main">What is refinemedium?</h2>
+          <p class="paragraph-7">RefineMedium is a decentralised Video on Demand (VoD) platform based on Ethereum Technology<br>governed by Blockchain Technology through Smart Contracts.<br></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="feature-refine" data-w-id="2fa2eaeb-3ce5-3d1e-f08d-750fbe91860c" style="opacity:0" class="section">
+    <div class="w-container">
+      <div class="section-title-group">
+        <h2 class="section-heading centered">mission</h2>
+        <div class="section-subheading center">Validation<em>, </em>Verification<em> </em>and<em> </em>Vindication<em> </em>of viewership along with a rigid,immutable and secure<br>ledger in order to build trust in the blockchain system<em>.</em><br></div>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-4">
+          <div class="white-box"><img src="images/feather-15-white.svg" class="grid-image">
+            <h3>Graphic Design</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="white-box"><img src="images/feather2-17-white.svg" width="210" class="grid-image">
+            <h3>Awesome code</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="white-box"><img src="images/feather2-22-white.svg" class="grid-image">
+            <h3>free template</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-container">
+      <h1 data-w-id="347cc3e6-9098-355f-7de7-3df8015a438e" style="opacity:0" class="heading-7">tokenomics</h1>
+    </div>
+
+
+
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/pie.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<script type="text/javascript">
+  var chart = AmCharts.makeChart( "chartdiv", {
+  "type": "pie",
+  "theme": "light",
+  "dataProvider": [ {
+    "country": "total tokens",
+    "value": 260
+  }, {
+    "country": "allocated for ico",
+    "value": 201
+  }, {
+    "country": "allocated for team",
+    "value": 65
+  }, {
+    "country": "number of locked tokens",
+    "value": 44
+  }, {
+    "country": "allocated for platform",
+    "value": 24
+  } ],
+  "valueField": "value",
+  "titleField": "country",
+  "outlineAlpha": 0.4,
+  "depth3D": 15,
+  "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+  "angle": 30,
+  "export": {
+    "enabled": true
+  }
+} );
+</script>
+<div id="chartdiv" style="  width: 100%;
+  height: 500px;"></div>
+
+    <div class="container-3 w-container">
+      <div data-w-id="46d9410a-7c8f-26b5-a423-a8f7add87a28" style="opacity:0" class="row-2 w-row">
+        <div class="w-col w-col-6">
+          <h3 class="heading-10">total tokens</h3>
+        </div>
+        <div class="w-col w-col-6">
+          <h3>2,000,000</h3>
+        </div>
+      </div>
+    </div>
+    <div data-w-id="54ea1e7b-d4c7-eb88-3ac3-305d43b66ef9" style="opacity:0" class="container-4 w-container">
+      <div class="w-row">
+        <div class="w-col w-col-6">
+          <h3 class="heading-11">allocated for ico</h3>
+        </div>
+        <div class="w-col w-col-6">
+          <h3 class="heading-16">500,000</h3>
+        </div>
+      </div>
+    </div>
+    <div data-w-id="e0e080fa-9be4-fd56-d1ca-f5e6fb610e5f" style="opacity:0" class="container-7 w-container">
+      <div class="w-row">
+        <div class="w-col w-col-6">
+          <h3 class="heading-12">allocated for team</h3>
+        </div>
+        <div class="w-col w-col-6">
+          <h3 class="heading-17">500,000</h3>
+        </div>
+      </div>
+    </div>
+    <div data-w-id="bfda22df-08e5-25cf-4830-4708767ed482" style="opacity:0" class="container-6 w-container">
+      <div class="w-row">
+        <div class="w-col w-col-6">
+          <h3 class="heading-13">number of locked tokens</h3>
+        </div>
+        <div class="w-col w-col-6">
+          <h3 class="heading-18">500,000</h3>
+        </div>
+      </div>
+    </div>
+    <div data-w-id="ae0c4f4f-bcf5-9c05-7735-7e7f6ca76c9b" style="opacity:0" class="container-5 w-container">
+      <div class="w-row">
+        <div class="w-col w-col-6">
+          <h3 class="heading-14">allocated for platform</h3>
+        </div>
+        <div class="w-col w-col-6">
+          <h3 class="heading-19">500,000</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section accent">
+    <div class="w-container">
+      <div class="section-title-group">
+        <h1 data-w-id="6ea06cea-16d5-8aa2-abe7-e024361801c0" style="opacity:0" class="section-heading centered new">roadmap</h1>
+      </div>
+      <div data-duration-in="300" data-duration-out="100" class="tabs-wrapper w-tabs">
+        <div class="w-tab-content">
+          <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
+            <div><img src="images/timeline22018.png" srcset="images/timeline22018-p-500.png 500w, images/timeline22018.png 595w" sizes="(max-width: 479px) 75vw, (max-width: 743px) 80vw, 595px" data-w-id="651aa095-c169-436d-2f1d-27d7d3e5443f" style="opacity:0"></div><img src="images/timeline32018.png" srcset="images/timeline32018-p-500.png 500w, images/timeline32018.png 595w" sizes="(max-width: 479px) 75vw, (max-width: 743px) 80vw, 595px" data-w-id="7ddff706-9301-c1ab-d5de-73e776afc62d" style="opacity:0"><img src="images/timeline42018.png" srcset="images/timeline42018-p-500.png 500w, images/timeline42018.png 595w" sizes="(max-width: 479px) 75vw, (max-width: 743px) 80vw, 595px" data-w-id="e0a3fb03-0578-4f48-4110-9fbfe1de9c5e" style="opacity:0"><img src="images/timeline12019.png" srcset="images/timeline12019-p-500.png 500w, images/timeline12019.png 595w" sizes="(max-width: 479px) 75vw, (max-width: 743px) 80vw, 595px" data-w-id="1a8dc9fd-6fb1-77c7-c93d-5726b7540161" style="opacity:0"><img src="images/timeline22019.png" srcset="images/timeline22019-p-500.png 500w, images/timeline22019.png 595w" sizes="(max-width: 479px) 75vw, (max-width: 743px) 80vw, 595px" data-w-id="5f910a29-6a11-fb67-6761-aa7cc95a45f3" style="opacity:0"></div>
+          <div data-w-tab="Tab 2" class="w-tab-pane">
+            <div><img src="images/5fcb0a55.jpg" srcset="images/5fcb0a55-p-500x334.jpeg 500w, images/5fcb0a55.jpg 1300w" sizes="(max-width: 479px) 75vw, (max-width: 991px) 84vw, 88vw" class="fullwidth-image">
+              <h2>Heading</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. <br>Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.<br>Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+            </div>
+          </div>
+          <div data-w-tab="Tab 3" class="w-tab-pane">
+            <div><img src="images/5cf8b62b.jpg" srcset="images/5cf8b62b-p-500x333.jpeg 500w, images/5cf8b62b-p-800x532.jpeg 800w, images/5cf8b62b-p-1080x718.jpeg 1080w, images/5cf8b62b.jpg 1300w" sizes="(max-width: 479px) 75vw, (max-width: 991px) 84vw, 88vw" class="fullwidth-image">
+              <h2>Heading</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. <br>Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. <br>Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-w-id="3175ce5d-ea1b-4591-a09c-8f6c98ce45f7" style="opacity:0" class="section">
+    <div class="w-container">
+      <div class="section-title-group">
+        <h2 class="section-heading centered">why refineMEDIUM?</h2>
+        <div class="section-subheading center"> <br> A multitude of Over The Top (OTT) video platforms for video streaming and uploading, have been burgeoning in the recent years and are highly successful in generating a humongous revenue. However, the segment is supremely-centralised with a small number of corporates controlling the entire distribution ecosystem. The aim is to transform the existing industry through path-breaking technologies and make the VoD market more transparent, secure, decentralised and thus ameliorate the social experience of customers. <br><br></div>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-4">
+          <div class="white-box"><img src="images/security.png" width="132" srcset="images/security-p-500.png 500w, images/security.png 512w" sizes="132px" data-w-id="9e11d170-4f70-8aec-f783-d35fe899a96a" style="opacity:0">
+            <h3>security</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="white-box"><img src="images/mission.png" width="133" srcset="images/mission-p-500.png 500w, images/mission.png 512w" sizes="133px" data-w-id="a2cf07d8-d68d-dbea-83cb-b666b672c4b0" style="opacity:0">
+            <h3>reliable</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="white-box"><img src="images/cdecentralizedsocialnetwork.png" width="134" srcset="images/cdecentralizedsocialnetwork-p-500.png 500w, images/cdecentralizedsocialnetwork.png 512w" sizes="134px" data-w-id="9b3f86b7-1a92-b6aa-dd2b-6c7a6a54429b" style="opacity:0">
+            <h3>hard working</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="team-members" class="section accent">
+    <div class="w-container">
+      <div class="section-title-group">
+        <h2 data-w-id="e455239e-61a4-156f-ed6e-d75ad0ed0fce" style="opacity:0" class="section-heading centered some">TEAM</h2>
+        <div data-w-id="e455239e-61a4-156f-ed6e-d75ad0ed0fd0" style="opacity:0" class="section-subheading center some">the team which made refineMedium possible</div>
+      </div>
+      <div class="w-row">
+        <div data-w-id="e455239e-61a4-156f-ed6e-d75ad0ed0fd3" style="opacity:0" class="w-col w-col-3"><img src="images/rsz_1whatsapp_image_2018-07-21_at_170648.jpg" width="366" data-w-id="e455239e-61a4-156f-ed6e-d75ad0ed0fd4" style="opacity:0" class="image">
+          <h5 class="heading-4 some">member 1</h5>
+          <p data-w-id="e455239e-61a4-156f-ed6e-d75ad0ed0fd7" style="opacity:0" class="paragraph-3 some">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+        </div>
+        <div data-w-id="e455239e-61a4-156f-ed6e-d75ad0ed0fd9" style="opacity:0" class="w-col w-col-3"><img src="images/rsz_1whatsapp_image_2018-07-21_at_170648.jpg" width="241" data-w-id="e455239e-61a4-156f-ed6e-d75ad0ed0fda" style="opacity:0">
+          <h5 class="heading-4 some">member 2</h5>
+          <p data-w-id="e455239e-61a4-156f-ed6e-d75ad0ed0fdd" style="opacity:0" class="paragraph-4 some">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+        </div>
+        <div data-w-id="e455239e-61a4-156f-ed6e-d75ad0ed0fdf" style="opacity:0" class="w-col w-col-3"><img src="images/rsz_1whatsapp_image_2018-07-21_at_170648.jpg" width="237" data-w-id="e455239e-61a4-156f-ed6e-d75ad0ed0fe0" style="opacity:0">
+          <h5 class="heading-4 some">member 3</h5>
+          <p data-w-id="e455239e-61a4-156f-ed6e-d75ad0ed0fe3" style="opacity:0" class="paragraph-5 some">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+        </div>
+        <div data-w-id="e455239e-61a4-156f-ed6e-d75ad0ed0fe5" style="opacity:0" class="w-col w-col-3"><img src="images/rsz_1whatsapp_image_2018-07-21_at_170648.jpg" width="245" data-w-id="e455239e-61a4-156f-ed6e-d75ad0ed0fe6" style="opacity:0">
+          <h5 class="heading-4 some">member 4</h5>
+          <p data-w-id="e455239e-61a4-156f-ed6e-d75ad0ed0fe9" style="opacity:0" class="paragraph-6 some">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="w-container">
+      <div class="section-title-group">
+        <h2 data-w-id="4c6dabba-0b4c-5fc2-8fec-6ae4ca02da7a" style="opacity:0" class="section-heading centered">ADVISORS</h2>
+        <div data-w-id="4c6dabba-0b4c-5fc2-8fec-6ae4ca02da7c" style="opacity:0" class="section-subheading center">the team of advisors linked with refineMedium</div>
+      </div>
+      <div class="w-row">
+        <div data-w-id="4c6dabba-0b4c-5fc2-8fec-6ae4ca02da7f" style="opacity:0" class="w-col w-col-3"><img src="images/rsz_1whatsapp_image_2018-07-21_at_170648.jpg" width="366" data-w-id="4c6dabba-0b4c-5fc2-8fec-6ae4ca02da80" style="opacity:0" class="image">
+          <h5 class="heading-4">member 1</h5>
+          <p data-w-id="4c6dabba-0b4c-5fc2-8fec-6ae4ca02da83" style="opacity:0" class="paragraph-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+        </div>
+        <div data-w-id="4c6dabba-0b4c-5fc2-8fec-6ae4ca02da85" style="opacity:0" class="w-col w-col-3"><img src="images/rsz_1whatsapp_image_2018-07-21_at_170648.jpg" width="241" data-w-id="4c6dabba-0b4c-5fc2-8fec-6ae4ca02da86" style="opacity:0">
+          <h5 class="heading-4">member 2</h5>
+          <p data-w-id="4c6dabba-0b4c-5fc2-8fec-6ae4ca02da89" style="opacity:0" class="paragraph-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+        </div>
+        <div data-w-id="4c6dabba-0b4c-5fc2-8fec-6ae4ca02da8b" style="opacity:0" class="w-col w-col-3"><img src="images/rsz_1whatsapp_image_2018-07-21_at_170648.jpg" width="237" data-w-id="4c6dabba-0b4c-5fc2-8fec-6ae4ca02da8c" style="opacity:0">
+          <h5 class="heading-4">member 3</h5>
+          <p data-w-id="4c6dabba-0b4c-5fc2-8fec-6ae4ca02da8f" style="opacity:0" class="paragraph-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+        </div>
+        <div data-w-id="4c6dabba-0b4c-5fc2-8fec-6ae4ca02da91" style="opacity:0" class="w-col w-col-3"><img src="images/rsz_1whatsapp_image_2018-07-21_at_170648.jpg" width="245" data-w-id="4c6dabba-0b4c-5fc2-8fec-6ae4ca02da92" style="opacity:0">
+          <h5 class="heading-4">member 4</h5>
+          <p data-w-id="4c6dabba-0b4c-5fc2-8fec-6ae4ca02da95" style="opacity:0" class="paragraph-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-w-id="c7cc4995-3998-7820-e388-068d8fad5725" style="opacity:0" class="section accent">
+    <div class="w-container">
+      <h2 class="heading-27 w-hidden-main">Collaborations<br>‍</h2>
+      <div class="section-title-group">
+        <h2 data-w-id="adea9f6d-d8b3-5a1e-5641-2e1ea39a9e69" style="opacity:0" class="section-heading centered show w-hidden-medium w-hidden-small w-hidden-tiny">COLLABORATIONS</h2>
+        <div data-w-id="f8091c97-85d2-253a-2182-4218ece40e6e" style="opacity:0" class="section-subheading center some">the collaborations with other teams that we have formed</div>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-6">
+          <div class="white-box transparent"><img src="images/city-scape.jpg" srcset="images/city-scape-p-500x334.jpeg 500w, images/city-scape-p-1080x721.jpeg 1080w, images/city-scape.jpg 1300w" sizes="(max-width: 479px) 65vw, (max-width: 767px) 78vw, (max-width: 991px) 37vw, 40vw" class="fullwidth-image">
+            <h3 class="some">SERVICES one</h3>
+            <p class="some">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p><a href="#" class="hollow-button all-caps">Learn more</a></div>
+        </div>
+        <div class="w-col w-col-6">
+          <div><img src="images/photo-1416400639808-f41f0c149b09.jpg" srcset="images/photo-1416400639808-f41f0c149b09-p-1080x721.jpeg 1080w, images/photo-1416400639808-f41f0c149b09.jpg 1300w" sizes="(max-width: 479px) 71vw, (max-width: 767px) 82vw, (max-width: 991px) 41vw, 43vw" class="fullwidth-image">
+            <h3 class="some">SERVICES two</h3>
+            <p class="some">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p><a href="#" class="hollow-button all-caps">Learn more</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="spc w-col w-col-4">
+          <h5 class="heading-3">about refinemedium</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+        </div>
+        <div class="spc w-col w-col-4">
+          <h5 class="heading-2">SUBSCRIBE TO OUR <br>NEWSLETTER</h5>
+          <div class="w-form">
+            <form id="email-form" name="email-form" data-name="Email Form"><label for="name">Name:</label><input type="text" class="w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your name" id="name" required=""><label for="email">Email Address:</label><input type="email" class="w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your email" id="email" required=""><input type="submit" value="Submit" data-wait="Please wait..." class="submit-button w-button"></form>
+            <div class="w-form-done">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="w-form-fail">
+              <div>Oops! Something went wrong while submitting the form.</div>
+            </div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <h5 class="heading">social</h5>
+          <div class="footer-link-wrapper w-clearfix"><img src="images/social-18.svg" width="20" class="info-icon"><a href="#" class="footer-link with-icon">Twitter</a></div>
+          <div class="footer-link-wrapper w-clearfix"><img src="images/social-03.svg" width="20" class="info-icon"><a href="#" class="footer-link with-icon">Facebook</a></div>
+          <div class="footer-link-wrapper w-clearfix"><img src="images/social-11.svg" width="20" class="info-icon"><a href="#" class="footer-link with-icon">Pinterest</a></div>
+          <div class="footer-link-wrapper w-clearfix"><img src="images/social-06.svg" width="20" class="info-icon"><a href="#" class="footer-link with-icon">Google</a></div>
+          <div class="footer-link-wrapper w-clearfix"><img src="images/social-12.svg" width="20" class="info-icon"><a href="#" class="footer-link with-icon">Webflow</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/refinemedium.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script type="text/javascript">
+(function($) {
+	/**
+	 * Twenty-Four Hour Clock Face
+	 *
+	 * This class will generate a twenty-four our clock for FlipClock.js
+	 *
+	 * @param  object  The parent FlipClock.Factory object
+	 * @param  object  An object of properties to override the default	
+	 */
+	FlipClock.TwentyFourHourClockFace = FlipClock.Face.extend({
+		/**
+		 * Constructor
+		 *
+		 * @param  object  The parent FlipClock.Factory object
+		 * @param  object  An object of properties to override the default	
+		 */
+		constructor: function(factory, options) {
+			this.base(factory, options);
+		},
+		/**
+		 * Build the clock face
+		 *
+		 * @param  object  Pass the time that should be used to display on the clock.	
+		 */
+		build: function(time) {
+			var t        = this;
+			var children = this.factory.$el.find('ul');
+			if(!this.factory.time.time) {
+				this.factory.original = new Date();
+				this.factory.time = new FlipClock.Time(this.factory, this.factory.original);
+			}
+			var time = time ? time : this.factory.time.getMilitaryTime(false, this.showSeconds);
+			if(time.length > children.length) {
+				$.each(time, function(i, digit) {
+					t.createList(digit);
+				});
+			}
+			this.createDivider();
+			this.createDivider();
+			$(this.dividers[0]).insertBefore(this.lists[this.lists.length - 2].$el);
+			$(this.dividers[1]).insertBefore(this.lists[this.lists.length - 4].$el);
+			this.base();
+		},
+		/**
+		 * Flip the clock face
+		 */
+		flip: function(time, doNotAddPlayClass) {
+			this.autoIncrement();
+			time = time ? time : this.factory.time.getMilitaryTime(false, this.showSeconds);
+			this.base(time, doNotAddPlayClass);	
+		}
+	});
+}(jQuery));
+</script>
+</body>
+</html>
